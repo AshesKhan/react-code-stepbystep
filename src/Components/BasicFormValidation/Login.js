@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Login() {
-    const [user, setUser]=useState()
+    const [user, setUser]=useState("")
    function loginHandle(e)
     {
         e.preventDefault()
