@@ -1,10 +1,13 @@
 // import logo from './logo.svg';
 import './App.css';
-import BasicForm from './Components/BasicForm/BasicForm';
+import Login from './Components/BasicFormValidation/Login';
+// import BasicForm from './Components/BasicForm/BasicForm';
+// import IfCondition from './Components/ConditionalRendering/IfCondition';
 // import HideandShow from './Components/HideandShow/HideandShow';
 // import InputBox from './Components/InputBox/InputBox';
 // import ClickEvent from './Components/CliclkEvent/ClickEvent';
 // import State from './Components/State/State';
+
 
 
 function App() {
@@ -14,7 +17,9 @@ function App() {
    {/* <State/> */}
    {/* <InputBox /> */}
    {/* <HideandShow /> */}
-   <BasicForm />
+   {/* <BasicForm /> */}
+   {/* <IfCondition /> */}
+   <Login/>
     </div>
   );
 }
