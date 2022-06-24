@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
-import './App.css';
-import MapFunction from './Components/MapFunction/MapFunction';
+// import User from './Components/MapFunction/User';
+// import MapFunction from './Components/MapFunction/MapFunction';
 // import PassProps from './Components/PassFunctionProps/PassProps';
 // import SecondPassProps from './Components/PassFunctionProps/SecondPassProps';
 // import Login from './Components/BasicFormValidation/Login';
@@ -10,18 +10,35 @@ import MapFunction from './Components/MapFunction/MapFunction';
 // import InputBox from './Components/InputBox/InputBox';
 // import ClickEvent from './Components/CliclkEvent/ClickEvent';
 // import State from './Components/State/State';
-// import Effect from './Components/useEffectCondition/UseEffect'
-
+// import Effect from './Components/useEffectCondition/UseEffect';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import './App.css';
+import About from './Components/Routing/About';
+import Home from './Components/Routing/Home';
+import NavBar from './Components/Routing/NavBar';
+import Page404 from './Components/Routing/Page404';
+import User from './Components/Routing/User';
 
 
 function App() {
 
-  // function getData(){
-  //   alert("hello from app")
-  // }
+
 
   return (
     <div className="App">
+      <BrowserRouter>
+     <NavBar />
+      <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/about" element={<About/>}/>
+      <Route path="/user" element={<User/>} />
+      {/* <Route path="/*" element={<Navigate to= "/" />} /> */}
+      {/* <Route path='/*' element={<Page404 />} /> */}
+      </Routes>
+      </BrowserRouter>
+
+
+
    {/* <ClickEvent/> */}
    {/* <State/> */}
    {/* <InputBox /> */}
@@ -35,7 +52,9 @@ function App() {
     <SecondPassProps data={getData}/>
    </div> */}
    {/* <Effect/> */}
-   <MapFunction/>
+   {/* <MapFunction/> */}
+   {/* <User alert={parentAlert}/> */}
+   <User/>
     </div>
   );
 }
@@ -58,9 +77,22 @@ export default App;
 
 
 
+  // function parentAlert(data)
+  // {
+  //   alert(data)
+  // }
 
 
 
+  // Parent to Child
+  // let data = "Ashes Khan"
+
+  // function getData(){
+  //   alert("hello from app")
+  // }
+
+
+//----------------------------------
 
 // import React from 'react';
 // import Props from './Components/Props/Props';

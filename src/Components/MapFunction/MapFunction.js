@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Table} from 'react-bootstrap';
 
 function MapFunction() {
     const students=[
@@ -22,7 +23,8 @@ function MapFunction() {
   return (
     <div>
         <h1>Map Function</h1>
-        <table border="1">
+        <Table striped bordered hover variant='dark' border="1">
+            <tbody>
             <tr>
                 <td>Name</td>
                 <td>email</td>
@@ -30,16 +32,17 @@ function MapFunction() {
             </tr>
 
         {
-            students.map((data)=>
+            students.map((data,i)=>
             
-                <tr>
+                <tr key={i}>
                     <td>My name is: {data.name}</td>
                     <td>{data.email}</td>
                     <td>{data.contact}</td>
                 </tr>
             )
         }
-        </table>
+        </tbody>
+        </Table>
     </div>
   );
 }
