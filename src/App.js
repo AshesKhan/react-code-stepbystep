@@ -11,13 +11,15 @@
 // import ClickEvent from './Components/CliclkEvent/ClickEvent';
 // import State from './Components/State/State';
 // import Effect from './Components/useEffectCondition/UseEffect';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import './App.css';
-import About from './Components/Routing/About';
-import Home from './Components/Routing/Home';
-import NavBar from './Components/Routing/NavBar';
-import Page404 from './Components/Routing/Page404';
-import User from './Components/Routing/User';
+
+//Routing
+// import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+// import './App.css';
+// import About from './Components/Routing/About';
+// import Home from './Components/Routing/Home';
+// import NavBar from './Components/Routing/NavBar';
+// import Page404 from './Components/Routing/Page404';
+// import User from './Components/Routing/User';
 
 
 function App() {
@@ -26,16 +28,18 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      
+      {/* Routing */}
+      {/* <BrowserRouter>
      <NavBar />
       <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/about" element={<About/>}/>
-      <Route path="/user" element={<User/>} />
-      {/* <Route path="/*" element={<Navigate to= "/" />} /> */}
-      {/* <Route path='/*' element={<Page404 />} /> */}
+      <Route path="/user/:name" element={<User/>} />
+      <Route path="/*" element={<Navigate to= "/" />} />
+      <Route path='/*' element={<Page404 />} />
       </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
 
 
 
@@ -54,7 +58,7 @@ function App() {
    {/* <Effect/> */}
    {/* <MapFunction/> */}
    {/* <User alert={parentAlert}/> */}
-   <User/>
+   {/* <User/> */}
     </div>
   );
 }

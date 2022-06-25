@@ -6,7 +6,8 @@ function Page404() {
     <div>
         <h1>Page 404</h1>
         <p>this Url is not Present</p>
-        <Link to="/">Go To Home page</Link>
+        <Link to="/">Go To Home page
+        </Link>
     </div>
   )
 }

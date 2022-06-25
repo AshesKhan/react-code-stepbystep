@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import {useParams} from 'react-router-dom';
 
 function User() {
+  const params = useParams();
+  const{name} = params;
+  console.warn(name)
+
   return (
     <div>
-        <h1>This is User Ashes Page</h1>
+        <h1>{name}</h1>
     </div>
   )
 }
