@@ -11,7 +11,6 @@
 // import ClickEvent from './Components/CliclkEvent/ClickEvent';
 // import State from './Components/State/State';
 // import Effect from './Components/useEffectCondition/UseEffect';
-
 //Routing
 // import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 // import './App.css';
@@ -21,14 +20,32 @@
 // import Page404 from './Components/Routing/Page404';
 // import User from './Components/Routing/User';
 
+import React,{createContext, useState} from 'react'
+import Child from "./Components/ContextAppi/Child";
+import OtherChild from './Components/ContextAppi/OtherChild';
+
+export const GlobalInfo = createContext();
+
 
 function App() {
-
-
+const[color, setColor] = useState('green');
+const [day, setDay] = useState('Monday')
+const getday=(item)=>{
+  console.warn(item)
+  setDay(item)
+}
 
   return (
+    <GlobalInfo.Provider value={{appColor:color, getDay:getday}}>
     <div className="App">
-      
+      <h1>App Component : {day}</h1>
+    <Child/>
+    <OtherChild/>
+
+
+    
+
+
       {/* Routing */}
       {/* <BrowserRouter>
      <NavBar />
@@ -60,6 +77,7 @@ function App() {
    {/* <User alert={parentAlert}/> */}
    {/* <User/> */}
     </div>
+    </GlobalInfo.Provider>
   );
 }
 
