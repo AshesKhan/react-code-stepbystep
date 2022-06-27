@@ -30,13 +30,14 @@ export const GlobalInfo = createContext();
 function App() {
 const[color, setColor] = useState('green');
 const [day, setDay] = useState('Monday')
+const [data, setData] = useState([])
 const getday=(item)=>{
   console.warn(item)
   setDay(item)
 }
 
   return (
-    <GlobalInfo.Provider value={{appColor:color, getDay:getday}}>
+    <GlobalInfo.Provider value={{appColor:color, getDay:getday,data,setData}}>
     <div className="App">
       <h1>App Component : {day}</h1>
     <Child/>
